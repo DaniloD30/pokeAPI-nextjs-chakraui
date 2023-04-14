@@ -23,6 +23,7 @@ The following tools were used in building the project:
 - [Axios](https://axios-http.com/docs/intro)
 - [Jest](https://jestjs.io/pt-BR/)
 - [Testing Library](https://testing-library.com)
+- [REDUX](https://redux.js.org/)
 
 <br/>
 
