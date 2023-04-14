@@ -46,7 +46,7 @@ How to Install
 
 ```bash
 1. git clone
-2. cd codeleap-nextjs
+2. cd pokeAPI-nextjs-chakraui
 ```
 
 - Install the dependencies and start:
