@@ -15,10 +15,10 @@ type Components = {
   tabTitle: string;
 };
 interface Props {
-  children: Components[];
+  componentProps: Components[];
 }
 
-export default function TabsContent({ children }: Props) {
+export default function TabsContent({ componentProps }: Props) {
   return (
     <>
       <Tabs
@@ -29,14 +29,14 @@ export default function TabsContent({ children }: Props) {
         marginTop="30px"
       >
         <TabList>
-          {children.map((component, index) => (
+          {componentProps.map((component, index) => (
             <Tab key={`${index}-${component.tabTitle}`} fontFamily="fantasy">
               {component.tabTitle}
             </Tab>
           ))}
         </TabList>
         <TabPanels>
-          {children.map((component, index) => (
+          {componentProps.map((component, index) => (
             <TabPanel key={`${index}-${component.tabTitle}`} padding={2}>
               {component.element}
             </TabPanel>

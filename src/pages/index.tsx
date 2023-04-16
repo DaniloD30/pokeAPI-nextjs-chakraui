@@ -28,7 +28,7 @@ export default function Home() {
             }}
           >
             <Text
-              fontSize="4xl"
+              fontSize={{ base: "25px", md: "30px", lg: "40px", xl: "50px" }}
               as="b"
               color="#2a75bb"
               fontFamily="fantasy"

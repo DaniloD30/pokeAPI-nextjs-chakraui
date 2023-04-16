@@ -12,7 +12,7 @@ export default function List() {
   useEffect(() => {
     let pokemonsStorage = JSON.parse(localStorage.getItem("pokemons") || "[]");
     dispatch(addPokemonList(pokemonsStorage));
-  }, []);
+  }, [dispatch]);
 
   const arrComponents = [
     {
@@ -28,7 +28,7 @@ export default function List() {
   return (
     <>
       <Header />
-      <TabsContent children={arrComponents} />
+      <TabsContent componentProps={arrComponents} />
     </>
   );
 }

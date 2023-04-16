@@ -33,7 +33,7 @@ describe("TabsContent", () => {
     render(
       <QueryClientProvider client={queryClient}>
         <Provider store={store}>
-          <TabsContent children={mock} />
+          <TabsContent componentProps={mock} />
         </Provider>
       </QueryClientProvider>
     );

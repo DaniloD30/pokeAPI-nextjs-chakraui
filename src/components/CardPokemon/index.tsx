@@ -1,4 +1,4 @@
-import { Button, Flex } from "@chakra-ui/react";
+import { Button, Flex, useToast } from "@chakra-ui/react";
 import { Colors, BoxShadow } from "@/styles/theme";
 import { IPokemon } from "@/types";
 import CardIndex from "./CardIndex";
@@ -11,6 +11,30 @@ export default function CardPokemon({ name, url, type }: IPokemon) {
   const dexIndex = +url.split("/")[url.split("/").length - 2];
   const artworkUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${dexIndex}.png`;
   const dispatch = useAppDispatch();
+
+  const toast = useToast();
+
+  const handleDispatch = () => {
+    if (type === "all") {
+      dispatch(addPokemon({ name, url }));
+      toast({
+        title: "Pokemon added.",
+        description:
+          "Now you can go to the favorites list and view your pokemons.",
+        status: "success",
+        duration: 3000,
+        isClosable: true,
+      });
+    } else {
+      dispatch(removePokemon({ name, url }));
+      toast({
+        title: "Pokemon removed",
+        status: "info",
+        duration: 3000,
+        isClosable: true,
+      });
+    }
+  };
 
   return (
     <Flex
@@ -27,11 +51,7 @@ export default function CardPokemon({ name, url, type }: IPokemon) {
         boxShadow: BoxShadow.pink,
         transform: "translateY(-6px)",
       }}
-      onClick={() =>
-        type === "all"
-          ? dispatch(addPokemon({ name, url }))
-          : dispatch(removePokemon({ name, url }))
-      }
+      onClick={() => handleDispatch()}
     >
       <CardIndex dexIndex={dexIndex} />
       <CardArtworkPokemon artworkUrl={artworkUrl} />

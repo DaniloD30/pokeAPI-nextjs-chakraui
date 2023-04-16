@@ -17,7 +17,11 @@ export default function List() {
         backgroundColor="#ffcb05"
       >
         {favPokemons.length === 0 ? (
-          <Text fontSize="5xl" as="b" fontFamily="fantasy">
+          <Text
+            fontSize={{ base: "25px", md: "30px", lg: "40px", xl: "50px" }}
+            as="b"
+            fontFamily="fantasy"
+          >
             Click on a pokemon in the all tab and favorite it!
           </Text>
         ) : (
