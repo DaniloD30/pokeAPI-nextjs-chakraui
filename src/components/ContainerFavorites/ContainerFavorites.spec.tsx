@@ -38,7 +38,7 @@ describe("ContainerFavorites", () => {
     );
 
     const textTitle = screen.getByText(
-      /Click on a pokemon in the all tab and favorite it\!/i
+      /Click on a pokémon in the all tab and favorite it\!/i
     );
 
     expect(textTitle).toBeInTheDocument();

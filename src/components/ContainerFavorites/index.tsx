@@ -22,7 +22,7 @@ export default function List() {
             as="b"
             fontFamily="fantasy"
           >
-            Click on a pokemon in the all tab and favorite it!
+            Click on a pokémon in the all tab and favorite it!
           </Text>
         ) : (
           favPokemons.map((fav) => (

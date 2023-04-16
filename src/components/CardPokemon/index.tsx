@@ -18,9 +18,9 @@ export default function CardPokemon({ name, url, type }: IPokemon) {
     if (type === "all") {
       dispatch(addPokemon({ name, url }));
       toast({
-        title: "Pokemon added.",
+        title: "Pokémon added.",
         description:
-          "Now you can go to the favorites list and view your pokemons.",
+          "Now you can go to the favorites list and view your pokémons.",
         status: "success",
         duration: 3000,
         isClosable: true,
@@ -28,7 +28,7 @@ export default function CardPokemon({ name, url, type }: IPokemon) {
     } else {
       dispatch(removePokemon({ name, url }));
       toast({
-        title: "Pokemon removed",
+        title: "Pokémon removed",
         status: "info",
         duration: 3000,
         isClosable: true,
