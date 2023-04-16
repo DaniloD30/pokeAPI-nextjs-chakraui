@@ -23,9 +23,17 @@ The following tools were used in building the project:
 - [Axios](https://axios-http.com/docs/intro)
 - [Jest](https://jestjs.io/pt-BR/)
 - [Testing Library](https://testing-library.com)
+- [REDUX](https://redux.js.org/)
 
 <br/>
 
+<p align="center">
+  Complete! 🤖
+  <br/>
+  <a align="center" href="https://poke-api-nextjs-chakraui.vercel.app/" target="_blank">
+    Access at the address: https://poke-api-nextjs-chakraui.vercel.app/
+  </a>
+</p>
 Getting Started
 =================
 
@@ -46,7 +54,7 @@ How to Install
 
 ```bash
 1. git clone
-2. cd codeleap-nextjs
+2. cd pokeAPI-nextjs-chakraui
 ```
 
 - Install the dependencies and start:
